@@ -18,7 +18,6 @@ namespace matrixe
             {2, 6, 5}
         });
             matrix1 = matrix1 * 3;
-            Console.WriteLine("Резултат за умножение: ");
             Console.WriteLine(matrix1);
 
             var matrix2 = DenseMatrix.OfArray(new double[,] {
@@ -27,17 +26,14 @@ namespace matrixe
             {3, 2, 1}
         });
             matrix2 = matrix1 + matrix2;
-            Console.WriteLine("Резултат на събиране: ");
             Console.WriteLine(matrix2);
 
             var det = matrix1.Determinant();
-            Console.WriteLine("Детерминанта: ");
             Console.WriteLine(det);
 
             var vector = new DenseVector(new[] { 12.0, 8.0, 5.0 });
             var v = new DenseVector(new[] { 0, 0, 0.0 });
             var solve = matrix1.Solve(vector);
-            Console.WriteLine("Решение на матрица: ");
             Console.WriteLine(solve);
         }
     }
